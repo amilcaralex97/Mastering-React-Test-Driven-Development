@@ -1,7 +1,7 @@
 import ReactTestUtils from "react-dom/test-utils";
 import React from "react";
 import ReactDOM from "react-dom";
-import { Appointment, AppointmentDayView } from "../src/Appointment";
+import { Appointment, AppointmentDayView } from "../src/AppointmentDayView";
 
 describe("Apppointment", () => {
   beforeEach(() => {
@@ -28,6 +28,10 @@ describe("Apppointment", () => {
     render(<Appointment customer={customer} />);
 
     expect(container.textContent).toMatch("Jordan");
+  });
+
+  it.skip("renders costumer lastName", () => {
+    customer;
   });
 });
 
@@ -66,7 +70,7 @@ describe("ApppointmentDayView", () => {
     render(<AppointmentDayView appointments={appointments} />);
   });
 
-  it("initially shows a message saying there are no appointments  today", () => {
+  it("initially shows a message saying there are no appointments today", () => {
     render(<AppointmentDayView appointments={[]} />);
     expect(container.textContent).toMatch(
       "There are no appointments scheduled for today."
