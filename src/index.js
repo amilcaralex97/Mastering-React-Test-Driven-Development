@@ -1,11 +1,9 @@
 import React from "react";
-import ReactDom from "react-dom";
-import { AppointmentDayView } from "./AppointmentDayView";
+import ReactDOM from "react-dom";
+import { AppointmentsDayView } from "./AppointmentsDayView";
 import { sampleAppointments } from "./sampleData";
 
-console.log(document.getElementById("root"));
-
-ReactDom.render(
-  <AppointmentDayView appointments={sampleAppointments} />,
+ReactDOM.render(
+  <AppointmentsDayView appointments={sampleAppointments} />,
   document.getElementById("root")
 );
